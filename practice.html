@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+
+<style type="text/css">
+	
+	#xxx, #xxx th, #xxx td {
+
+		border-collapse: collapse;
+
+		border: 1px solid:#A2A2A2;
+
+		padding: 5;
+
+		font-size: 9pt;
+
+		font-family: tahoma, 굴림, 돋움, verdana;
+
+	} 
+
+
+</style>
+
+<script>
+	
+	function checkMemForm(){
+
+		var userId = document.memRegForm.userId.value;
+
+		var regExp = new RegExp(/^[a-z][a-z0-9_]{4,9}$/);
+
+		if(regExp.test(userId)==false){
+			alert("올바른 아이디가 아닙니다.")
+			return;
+		}
+	}
+
+</script>
+
+
+<body><center>
+
+	<form name="memRegForm"
+		  action="http://www.google.com"
+		  method="post" 
+		  enctype="multipart/form-data" 
+	>
+
+	<table border="1" cellpadding="5" id="xxx" >
+		<caption>회원 가입</caption>
+		<!-- 1행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">아이디</th>
+			<td>
+				<input type="text" name="userId" size="20" maxlength="10">
+			</td>
+		</tr>
+
+		<!-- 2행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">비밀번호</th>
+			<td>
+				<input type="password" name="pwd" value="" size="20" 
+				maxlength="12">
+			</td>
+		</tr>
+
+		<!-- 3행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">전화</th>
+			<td>
+				<input type="text" name="phone" size="20" maxlength="15">
+			</td>
+		</tr>
+
+		<!-- 4행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">스킬</th>
+
+			<td>
+				<input type="checkbox" name="skill" value="JSP" checked>JSP
+				<input type="checkbox" name="skill" value="ASP">ASP
+				<input type="checkbox" name="skill" value="PHP">PHP
+			</td>
+		</tr>
+
+		<!-- 5행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">학력</th>
+			<td>
+				<input type="radio" name="school" value="중졸">중졸
+				<input type="radio" name="school" value="고졸"checked>고졸
+				<input type="radio" name="school" value="대졸">대졸
+			</td>
+		</tr>
+
+		<!-- 6행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">종교</th>
+			<td>
+				<select name="religion">
+					<option value="" selected>선택요망</option>
+					<option value="무교">무교</option>
+					<option value="천주교">천주교</option>
+					<option value="기독교">기독교</option>
+					<option value="이슬람교">이슬람교</option>
+					<option value="불교">불교</option>
+				</select>
+			</td>
+		</tr>
+
+		<!-- 7행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">사진</th>
+			<td>
+				<input type="file" name="pic">
+			</td>
+		</tr>
+
+		<!-- 8행 -->
+		<tr>
+			<th bgcolor="#DBDBDB">자기소개</th>
+			<td>
+				<textarea name="introduce" cols="20" rows="10">
+					
+				</textarea>
+			</td>
+		</tr>
+
+	</table>
+<table>
+	<tr>
+	<td height="7"></td>
+	</tr>
+</table>
+<input type="button" value="저장" onclick="checkMemForm();">
+&nbsp&nbsp&nbsp
+<input type="reset" value="초기화">
+&nbsp&nbsp&nbsp
+<input type="submit" value="저장">
+	
+
+
+
+<input type="hidden" name="mem_no" value="11">
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
