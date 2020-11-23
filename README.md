@@ -43,11 +43,11 @@ Chap. 6
 
 <form태그의 속성>
 
-<form name="memRegForm"
-           action="http://www.naver.com"
-           method="post"
-           enctype="multipart/form-data"
->
+     <form name="memRegForm"
+                action="http://www.naver.com"
+                method="post"
+                enctype="multipart/form-data"
+     >
 
 택배 보낼 물건을 택배상자에 넣듯 만들게 될 입력 양식 태그도 form 태그 내부에 삽입된다(form = 택배상자)
 
@@ -61,15 +61,15 @@ enctype : 전송될 데이터의 형식을 설정
 
 <해당 열의 text 타입 입력양식 >
 
-<td>
-<input type="text" name="userId" size="20" maxlength="10">
-</td>
+     <td>
+     <input type="text" name="userId" size="20" maxlength="10">
+     </td>
 
 한 줄의 [문자열]을 입력받는 양식 설정
 
 <암호 입력양식>
 
-<input type="password" name="pwd" value="" size="20" maxlength="12">
+     <input type="password" name="pwd" value="" size="20" maxlength="12">
 
 > type 을 password 로 하면 바둑알이 들어간다
 > size 는 가로로 크기를 설정하고
@@ -77,13 +77,13 @@ enctype : 전송될 데이터의 형식을 설정
 
 <전화번호 입력양식>
 
-<input type="text" name="phone" size="20" maxlength="15">
+     <input type="text" name="phone" size="20" maxlength="15">
 
 <체크박스 입력양식>
 
-<input type="checkbox" name="skill" value="JSP" checked>JSP
-<input type="checkbox" name="skill" value="ASP">ASP
-<input type="checkbox" name="skill" value="PHP">PHP
+     <input type="checkbox" name="skill" value="JSP" checked>JSP
+     <input type="checkbox" name="skill" value="ASP">ASP
+     <input type="checkbox" name="skill" value="PHP">PHP
 
 > value는 화면에 보이는 값이 아니다. 화면에 보이려면 >태그 밖에 써줘야 한다.
 > checkbox 는 다중 선택이 가능하다. [다중체크입력방식]
@@ -95,9 +95,9 @@ enctype : 전송될 데이터의 형식을 설정
 
 <라디오 입력방식>
 
-<input type="radio" name="school" value="중졸">중졸
-<input type="radio" name="school" value="고졸" checked>고졸
-<input type="radio" name="school" value="대졸">대졸
+     <input type="radio" name="school" value="중졸">중졸
+     <input type="radio" name="school" value="고졸" checked>고졸
+     <input type="radio" name="school" value="대졸">대졸
 
 > radio는 하나만 선택이 가능하다.[단일체크입력방식]
 > 이것 또한 이름은 2개이상 동일해도 된다. 체크한 놈의 value 값만 다르면 
@@ -107,15 +107,15 @@ enctype : 전송될 데이터의 형식을 설정
 
 <목록상자 입력방식>
 
-<td>
-<select name="religion" size="5" multipled>
-     <option value="" selected >선택요망</option>
-     <option value="불교">불교</option>
-     <option value="기독교">기독교</option>
-     <option value="천주교">천주교</option>
-     <option value="무교">무교</option>
-</select>
-</td>
+     <td>
+     <select name="religion" size="5" multipled>
+          <option value="" selected >선택요망</option>
+          <option value="불교">불교</option>
+          <option value="기독교">기독교</option>
+          <option value="천주교">천주교</option>
+          <option value="무교">무교</option>
+     </select>
+     </td>
 
 > 입력 양식의 이름을 지정하고 주로 오라클 칼럼명과 일치한다.
 > 라디오버튼 입력방식과 비슷하다.
@@ -131,22 +131,23 @@ enctype : 전송될 데이터의 형식을 설정
 
 <파일(사진) 입력 양식 >
 
-<form enctype="multipart/form-data">
-<td>
-     <input type="file" name="pic">
-</td>
+     <form enctype="multipart/form-data">
+     <td>
+          <input type="file" name="pic">
+     </td>
 
 > [파일입력상자] 는 절대로 키보드로 칠 수 없고 [찾아보기]를 클릭해야한다.
 > <input type="file" name=""> 만 코딩하게되면 파일이 가는 것이 아니라
    파일 이름만 가게 된다. (파일업로드를 해야한다)
 > 파일업로드를 하기위해선 택배상자에 취급주의 스티커가 붙듯 뭐가들어있는지 알수있듯이
   <form> 상자 안에 enctype="multipart/form-data"를 붙여야 진짜 파일이 간다.
+     
 <많은 문자열(메모장) 입력양식>
 
-<td>
-     <textarea name="introduce" cols="20" rows="10">
-     </textarea>
-</td>
+     <td>
+          <textarea name="introduce" cols="20" rows="10">
+          </textarea>
+     </td>
 
 > 다중문자열입력양식은 <textarea> 다.
 > 좌우 크기를 길이를 줄일때는 size=""가 아니라 cols=""이다.
@@ -159,42 +160,42 @@ enctype : 전송될 데이터의 형식을 설정
 
 1. 빈 table을 만들어 높이를 준다
 
-<table><tr><td height="10"></td></tr></table>
+          <table><tr><td height="10"></td></tr></table>
 
 테이블 태그도 독고다이 태그, 한행을 독차지하므로 자동으로 줄바꿈이 된다.
 
 2. div 을 사용한다
 
-<div style="height:10pt;"></div>
+          <div style="height:10pt;"></div>
 
 
 <버튼 클릭시 이벤트실행 입력양식>
 
-<script>
-     function checkMemForm(){
-          var userId = document.regMemForm.userId.value;
-          var regExp = new RegExp ( /^ [a-z][a-z0-9_]{4,9} $/ ) ;
-          if(regExp.test(userId)==false){
-               alert("올바른 아이디가 아닙니다")
-          }               
-     }
-</script>
-<input type="button" value="저장" onclick="checkMemForm();">
+     <script>
+          function checkMemForm(){
+               var userId = document.regMemForm.userId.value;
+               var regExp = new RegExp ( /^ [a-z][a-z0-9_]{4,9} $/ ) ;
+               if(regExp.test(userId)==false){
+                    alert("올바른 아이디가 아닙니다")
+               }               
+          }
+     </script>
+     <input type="button" value="저장" onclick="checkMemForm();">
 
 
 
 [초기화 버튼 이벤트 입력양식]
 
-<input type="reset" value="초기화">
+     <input type="reset" value="초기화">
 
 [서버로 보낼 주소를 설정하고 보내는 버튼 이벤트 입력 양식]
 
-<form action="http://www.naver.com">
-<input type="submit" value="저장">
+     <form action="http://www.naver.com">
+     <input type="submit" value="저장">
 
 [숨겨진 문자열 입력 양식]
 
-<input type="hidden" name="mem_no" value="11">
+     <input type="hidden" name="mem_no" value="11">
 
 > 숨겨진 문자열 입력양식은 코딩을 해도 화면에 보이지 않는다
 > 화면에 보일 필요는 없지만 꼭 서버로 보내고 싶은 데이터가 있을 경우
